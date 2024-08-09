@@ -1,0 +1,90 @@
+User collection
+
+{
+  "_id": "ObjectId",
+  "username": "String",
+  "email": "String",
+  "passwordHash": "String",
+  "createdAt": "Date",
+  "updatedAt": "Date",
+  "addresses": [
+    {
+      "addressLine1": "String",
+      "addressLine2": "String",
+      "city": "String",
+      "state": "String",
+      "zipCode": "String",
+      "country": "String"
+    }
+  ],
+  "orderHistory": [
+    {
+      "orderId": "ObjectId",
+      "orderDate": "Date",
+      "totalAmount": "Number",
+      "status": "String"
+    }
+  ]
+}
+
+Products collection
+
+{
+  "_id": "ObjectId",
+  "name": "String",
+  "description": "String",
+  "price": "Number",
+  "category": "String",
+  "rating": "Number",
+  "stock": "Number",
+  "images": ["String"],
+  "createdAt": "Date",
+  "updatedAt": "Date"
+}
+
+Orders collection
+
+{
+  "_id": "ObjectId",
+  "userId": "ObjectId",
+  "orderDate": "Date",
+  "status": "String",
+  "totalAmount": "Number",
+  "items": [
+    {
+      "productId": "ObjectId",
+      "quantity": "Number",
+      "price": "Number"
+    }
+  ],
+  "shippingAddress": {
+    "addressLine1": "String",
+    "addressLine2": "String",
+    "city": "String",
+    "state": "String",
+    "zipCode": "String",
+    "country": "String"
+  },
+  "paymentDetails": {
+    "paymentMethod": "String",
+    "paymentStatus": "String",
+    "transactionId": "String"
+  },
+  "tracking": {
+    "dispatchDate": "Date",
+    "deliveryDate": "Date",
+    "currentStatus": "String"
+  }
+}
+
+Admin collection
+
+{
+  "_id": "ObjectId",
+  "username": "String",
+  "email": "String",
+  "passwordHash": "String",
+  "createdAt": "Date",
+  "updatedAt": "Date"
+}
+
